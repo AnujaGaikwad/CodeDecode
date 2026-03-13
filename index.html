@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Code Explainer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💡 AI Code Explainer</h1>
+    <p class="subtitle">Paste your code and get a simple explanation.</p>
+
+    <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+
+    <button onclick="explainCode()">Explain Code</button>
+
+    <div class="output">
+        <h2>Explanation</h2>
+        <p id="explanationText">Your explanation will appear here...</p>
+    </div>
+
+</div>
+
+<script>
+function explainCode() {
+
+    const code = document.getElementById("codeInput").value;
+    const output = document.getElementById("explanationText");
+
+    if(code.trim() === ""){
+        output.innerText = "⚠️ Please paste some code first.";
+        return;
+    }
+
+    output.innerText = "This is where the AI explanation will appear. You can later connect this with an AI API.";
+}
+</script>
+
+</body>
+</html>
